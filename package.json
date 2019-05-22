@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "start": "parcel serve --out-dir=build/dev src/index.pug",
-    "build": "parcel build --public-url=/librerose/indexvideo --out-dir=dist src/index.pug"
+    "build": "parcel build --out-dir=build/dist --no-source-maps src/index.pug",
+    "dist": "rm -rf dist/ && parcel build --public-url=/librerose/indexvideo --out-dir=dist --no-source-maps src/index.pug"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,6 @@
   "homepage": "https://github.com/codinggirl/player-scratch#readme",
   "dependencies": {
     "@babel/preset-env": "^7.4.5",
-    "ind": "^1.0.2",
     "mediaplayer": "^2.0.1"
   },
   "devDependencies": {
